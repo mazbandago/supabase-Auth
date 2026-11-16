@@ -45,6 +45,20 @@ function SignUp() {
             </Link>
           </p>
 
+           <label htmlFor="name" className="font-bold">Name</label>
+          <input
+            className=" w-full bg-white  border border-gray-300 p-2 text-sm  rounded text-gray-800 outline-none focus:ring-2 ring-amber-200 focus:border-amber-200 "
+            type="email"
+            name="name"
+            id="name"
+            placeholder=""
+            required
+            aria-required="true"
+          //aria-invalid=
+          //aria-describedby=
+          disabled={isPending}
+          />
+
           <label htmlFor="email" className="font-bold">Email</label>
           <input
             className=" w-full bg-white  border border-gray-300 p-2 text-sm  rounded text-gray-800 outline-none focus:ring-2 ring-amber-200 focus:border-amber-200 "
@@ -72,6 +86,31 @@ function SignUp() {
           //aria-describedby=
           disabled={isPending}
           />
+
+          <fieldset
+            className="border font-bold px-5 py-2 bg-white rounded cursor-pointer"
+            aria-required="true"
+            aria-label="Select your role"
+          >
+            <legend>Select your role</legend>
+            <div className="font-medium m-2 flex gap-4 text-gray-900">
+              <label>
+                <input
+                  className=''
+                  type="radio"
+                  name="account-type"
+                  value="admin"
+                  required
+                />{' '}
+                Admin
+              </label>
+              <label>
+                <input type="radio" name="account-type" value="rep" required />{' '}
+                Sales Rep
+              </label>
+            </div>
+          </fieldset>
+
 
           <button
             type="submit"

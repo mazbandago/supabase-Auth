@@ -48,7 +48,7 @@ export default function AuthcontextProvider ({children}){
     }
    }
 //    signUp function
-async function signUpNewUser(email, password){
+async function signUpNewUser(email, password, name, account_type){
     try {
     const {error, data} = await supabase.auth.signUp({email:email.toLowerCase(), password:password}) 
     if(error){
