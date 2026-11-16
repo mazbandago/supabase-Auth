@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             <ProtectedRoute>
                 <Header/>
                 <Dashboard/>
-             </ProtectedRoute>
+            </ProtectedRoute>
         ),
     },
     {

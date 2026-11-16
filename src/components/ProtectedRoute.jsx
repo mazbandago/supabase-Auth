@@ -4,7 +4,6 @@ import { Navigate } from 'react-router-dom'
 
 function ProtectedRoute({children}) {
     const {session} = useAuth()
-    console.log(session)
   if(session===undefined){
     return <div>Loading...</div>
   }

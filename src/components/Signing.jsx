@@ -82,7 +82,6 @@ function Signing() {
           >
             {isPending ? "Signing In..." : "Sign In"}
           </button>
-
           {error && <h2 className="text-red-500 text-xl font-bold mx-4">{error.message}</h2>}
         </form>
       </div>
