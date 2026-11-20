@@ -10,7 +10,9 @@ function SignUp() {
     async (prevState, formData)=>{
       const email = formData.get("email")
       const password=formData.get("password")
-      const{error, success, data} = await signUpNewUser(email,password)
+      const name = formData.get("name")
+      const accountType = formData.get("account-type")
+      const{error, success, data} = await signUpNewUser(email,password, name, accountType)
       if (error){
         return new Error(error)
       }
@@ -96,7 +98,6 @@ function SignUp() {
             <div className="font-medium m-2 flex gap-4 text-gray-900">
               <label>
                 <input
-                  className=''
                   type="radio"
                   name="account-type"
                   value="admin"
